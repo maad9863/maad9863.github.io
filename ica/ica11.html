@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ICA11 Silly Hiking Story</title>
+
+  <style>
+    body {
+      background-color: lightgreen;
+      font-family: Arial;
+      color: darkgreen;
+      padding: 40px;
+    }
+
+    .container {
+      background-color: white;
+      border: 1px solid darkgreen;
+      padding: 20px;
+      max-width: 450px;
+      margin: auto;
+    }
+
+    h1 {
+      color: darkgreen;
+      font-size: 28px;
+    }
+
+    label {
+      color: darkgreen;
+    }
+
+    input {
+      margin: 10px;
+      padding: 5px;
+    }
+
+    fieldset {
+      border: 1px solid darkgreen;
+      margin: 10px 0;
+    }
+
+    legend {
+      color: darkgreen;
+    }
+
+    button {
+      background-color: darkgreen;
+      color: white;
+      border: 1px solid darkgreen;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    .story {
+      background-color: lightgreen;
+      color: darkgreen;
+      padding: 10px;
+      visibility: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Silly Hiking Story Generator</h1>
+
+    <div>
+      <label for="custom-name">Enter your name:</label>
+      <input id="custom-name" type="text">
+    </div>
+
+    <fieldset>
+      <legend>Choose Units:</legend>
+
+      <label for="us">US</label>
+      <input id="us" type="radio" name="uk-us" value="us" checked>
+
+      <label for="uk">UK</label>
+      <input id="uk" type="radio" name="uk-us" value="uk">
+    </fieldset>
+
+    <div>
+      <button class="generate">Generate Random Story</button>
+    </div>
+
+    <p class="story"></p>
+  </div>
+
+  <script>
+    // Variables and random function
+
+    const customName = document.getElementById("custom-name");
+    const generateBtn = document.querySelector(".generate");
+    const story = document.querySelector(".story");
+
+    function randomValueFromArray(array) {
+      const random = Math.floor(Math.random() * array.length);
+      return array[random];
+    }
+
+    // Story characters, places, and events
+
+    const characters = [
+      "a mountain goat",
+      "a lost hiker",
+      "a crazy squirrel"
+    ];
+
+    const places = [
+      "the top of a mountain",
+      "a campground",
+      "a waterfall"
+    ];
+
+    const events = [
+      "stole someone's lunch",
+      "fell into a giant puddle",
+      "started dancing in front of everyone"
+    ];
+
+    // Random story function
+
+    function returnRandomStoryString() {
+      const randomCharacter = randomValueFromArray(characters);
+      const randomPlace = randomValueFromArray(places);
+      const randomEvent = randomValueFromArray(events);
+
+      const storyText = `It was 94 Fahrenheit outside, so ${randomCharacter} went for a hike. When they got to ${randomPlace}, they looked around and then ${randomEvent}. Bob saw the whole thing and started laughing. The backpack weighed 300 pounds, so it was a pretty crazy day.`;
+
+      return storyText;
+    }
+
+    // Generate story button
+
+    generateBtn.addEventListener("click", generateStory);
+
+    function generateStory() {
+      let newStory = returnRandomStoryString();
+
+      if (customName.value !== "") {
+        const name = customName.value;
+        newStory = newStory.replace("Bob", name);
+      }
+
+      if (document.getElementById("uk").checked) {
+        const weight = Math.round(300 / 14) + " stone";
+        const temperature = Math.round((94 - 32) * 5 / 9) + " Celsius";
+
+        newStory = newStory.replace("300 pounds", weight);
+        newStory = newStory.replace("94 Fahrenheit", temperature);
+      }
+
+      story.textContent = newStory;
+      story.style.visibility = "visible";
+    }
+  </script>
+</body>
+</html>
