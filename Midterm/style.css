@@ -1,5 +1,5 @@
 body {
-    background-color: #AAC9E0;
+    background-color: #EAF3FA;
     color: #000000;
     font-family: "IBM Plex Serif", serif;
 
@@ -41,7 +41,7 @@ body {
         font-size: 16px;
     }
 
-.space {margin-left: 8px;}
+.space1 {margin-left: 8px;}
 .space2 {margin-left: 16px;}
 .space3 {margin-left: 24px;}
 .space4 {margin-left: 32px;}
@@ -49,7 +49,7 @@ body {
 
 
 button { 
-    backgournd: #38465D;
+    background: #38465D;
     color: #AAC9E0;
 }
 
@@ -74,6 +74,6 @@ input {
     border: 2px solid #38465D;
 }
 
-button:focus-visible, a:focus-visivble, input:focus-visible {
+button:focus-visible, a:focus-visible, input:focus-visible {
     outline: 3px solid #000000;
 }
