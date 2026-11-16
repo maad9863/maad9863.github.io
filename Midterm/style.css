@@ -1,0 +1,21 @@
+body {
+    background-color: #AAC9E0;
+    color: #000000;
+
+}
+
+.light {
+    border-left: 5px solid #AAC9E0;
+}
+
+.medium {
+    border-left: 5px solid #4183BD;
+}
+
+.dark {
+    border-left: 5px solid #38465D;
+}
+
+.black {
+    border-left: 5px solid #000000;
+}
