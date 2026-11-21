@@ -40,6 +40,8 @@ body {
 .screen {
     background: black;
     color: white;
+    width: 580px;
+    margin: 0 auto;
     height: 80px;
     font-size: 40px;
     padding: 10px;
