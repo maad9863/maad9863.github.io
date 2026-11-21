@@ -30,16 +30,18 @@ body {
 
 .washer {
     background: white;
-    width: 280px;
+    width: 600px;
     max-width: 85%;
-    padding: 20px auto;
+    padding: 30px;
+    margin: 20px auto;
+
 }
 
 .screen {
     background: black;
     color: white;
-    height: 120px;
-    font-size; 40px
+    height: 80px;
+    font-size: 40px;
     padding: 10px;
 }
 
