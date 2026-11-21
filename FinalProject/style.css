@@ -2,7 +2,7 @@ body {
     background:lightblue;
     font-family:Arial;
     color:black;
-    text-align:center
+    text-align:center;
 
 }
 
@@ -12,7 +12,7 @@ body {
 
 .square {
     display:inline-block;
-    width:120 px;
+    width: 120px;
     height: 120px;
 }
 
