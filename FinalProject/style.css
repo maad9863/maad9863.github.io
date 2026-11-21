@@ -31,7 +31,7 @@ body {
 .washer {
     background: white;
     width: 600px;
-    max-width: 85%;
+    height: 600px;
     padding: 30px;
     margin: 20px auto;
 
